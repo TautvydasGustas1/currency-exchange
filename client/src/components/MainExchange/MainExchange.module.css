@@ -1,0 +1,32 @@
+.mainContainer {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainInner {
+  text-align: "center";
+}
+
+.flexGrid {
+  display: flex;
+  justify-content: center;
+}
+.flexGrid .col {
+  margin: 6px;
+}
+
+@media (max-width: 300px) {
+  .flexGrid {
+    display: block;
+  }
+  .flexGrid .col input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.equal {
+  font-size: 50px;
+}

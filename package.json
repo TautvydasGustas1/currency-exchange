@@ -4,9 +4,12 @@
   "description": "Currency exchange program for IBM intership",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "addToDB": "node Utils/DataAdder.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +22,17 @@
   },
   "homepage": "https://github.com/TautvydasGustas1/currency-exchange#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.1",
+    "uuid": "^8.3.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "jest": "^26.4.2",
     "nodemon": "^2.0.4"
   }
 }
