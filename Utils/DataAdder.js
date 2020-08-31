@@ -3,12 +3,7 @@ var xml2js = require("xml2js");
 const connectDB = require("../config/db");
 const Currencies = require("../models/Currencies");
 const Rates = require("../models/Rates");
-
-const getCurrenciesURL =
-  "http://www.lb.lt/webservices/FxRates/FxRates.asmx/getCurrencyList";
-
-const getRatesURL =
-  "http://www.lb.lt/webservices/FxRates/FxRates.asmx/getCurrentFxRates";
+const { getCurrenciesURL, getRatesURL } = require("./Constants");
 
 class DataAdder {
   //Method for getting http response body with promise
@@ -148,3 +143,7 @@ const LauncProgram = async () => {
 };
 
 LauncProgram();
+
+module.exports = {
+  class: DataAdder,
+};
