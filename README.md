@@ -1,2 +1,3 @@
 # currency-exchange
- Project for IBM
+ Project for IBM intership
+ 
